@@ -72,7 +72,7 @@ GENERATEHASH(){
 	tput civis
 	if [[ ${save} == 'y' || ${save} == 'Y' ]]; then
 		`echo -e "FILE NAME: ${name}" > ${PWD}/hash.txt 2>/dev/null`
-		`echo -e "HASH FILE: ${hash}" >> ${PWD}/hash.txt 2>/dev/null`
+		`echo -e "HASH ${type^^} FILE: ${hash}" >> ${PWD}/hash.txt 2>/dev/null`
 		if [[ $? -eq 0 ]]; then
 			echo -e "${green}File Saved in ${PWD}/hash.txt Susessfully...!${end}"
 		else
